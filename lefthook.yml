@@ -1,0 +1,33 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+#
+# pre-push:
+#   commands:
+#     packages-audit:
+#       tags: frontend security
+#       run: yarn audit
+#     gems-audit:
+#       tags: backend security
+#       run: bundle audit
+#
+pre-commit:
+  piped: true
+  follow: true
+  commands:
+    staged:
+      priority: 1
+      run: echo {staged_files} | tr ' ' '\n'
+    typescript:
+      priority: 2
+      glob: "*.{ts,tsx}"
+      run: bun tsc --noEmit
+    biome:
+      priority: 3
+      glob: "*.{ts,tsx,js,jsx,json,jsonc,css}"
+      run: bun biome check --fix {staged_files}  --reporter summary
+    # test:
+    #   priority: 4
+    #   glob: "*.{test.ts,test.tsx,spec.ts,spec.tsx}"
+    #   run: pnpm vitest related --run
