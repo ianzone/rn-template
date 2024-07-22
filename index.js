@@ -1,6 +1,6 @@
 import { registerRootComponent } from "expo";
 
-import App from "./App";
+import App from "./src/App";
 
 // https://docs.expo.dev/guides/monorepos/#change-default-entrypoint
 
