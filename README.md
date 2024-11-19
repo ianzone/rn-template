@@ -1,6 +1,5 @@
-# TODO
-
-Biome，vitest
+# 库
+https://reactnative.directory/
 
 # 性能优化
 
@@ -16,3 +15,7 @@ https://reactnativeelements.com/docs/installation
 https://callstack.github.io/react-native-paper/
 
 https://tamagui.dev/docs/intro/introduction
+
+## 为何不使用 vitest？
+
+https://github.com/vitest-dev/vitest/issues/1321

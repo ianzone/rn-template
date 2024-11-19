@@ -33,4 +33,7 @@ pre-commit:
     test:
       priority: 5
       glob: "*.{test.ts,test.tsx,spec.ts,spec.tsx}"
-      run: na jest
+      run: nr test
+    check:
+      priority: 6
+      run: nr check
