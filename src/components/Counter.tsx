@@ -10,14 +10,12 @@ export function Counter(props: CounterProps) {
 
   return (
     <View style={styles.css}>
-      <Text testID='count'>{count}</Text>
+      <Text testID='count'>count: {count}</Text>
       <Button testID='incButton' title='Increment' onPress={() => increment()} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  css: {
-    backgroundColor: 'grey',
-  },
+  css: { alignItems: 'center', backgroundColor: 'yellow' },
 });
