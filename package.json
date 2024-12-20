@@ -7,6 +7,7 @@
     "dev": "expo start",
     "dev:cc": "expo start --clear",
     "build:web": "expo export --platform web",
+    "view": "expo serve",
     "lint": "biome check --fix src",
     "postinstall": "lefthook install",
     "update": "nu && nu expo@latest && expo install --fix && na outdated",
@@ -15,16 +16,14 @@
     "commit": "git add -A && git-cz"
   },
   "dependencies": {
-    "expo": "^52.0.18",
+    "expo": "^52.0.21",
     "expo-constants": "~17.0.3",
     "expo-linking": "~7.0.3",
-    "expo-router": "~4.0.11",
+    "expo-router": "~4.0.14",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.5",
-    "react-native-safe-area-context": "4.12.0",
-    "react-native-screens": "~4.1.0",
     "react-native-web": "~0.19.13"
   },
   "devDependencies": {
@@ -32,13 +31,13 @@
     "@biomejs/biome": "^1.9.4",
     "@testing-library/react-native": "^12.9.0",
     "@types/jest": "^29.5.14",
-    "@types/react": "~18.3.16",
+    "@types/react": "~18.3.18",
     "biome-extends": "^1.0.1",
     "expo-doctor": "^1.12.4",
     "git-cz": "^4.9.0",
     "jest": "^29.7.0",
     "jest-expo": "~52.0.2",
-    "lefthook": "^1.9.2",
+    "lefthook": "^1.10.0",
     "typescript": "~5.3.3"
   },
   "jest": {
