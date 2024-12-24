@@ -1,14 +1,15 @@
 import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
+import { Container } from 'src/components';
 
 export default function Page() {
   return (
-    <View>
+    <Container>
       <Text style={styles.subtitle}>This is a static route '/static'</Text>
       <Link href='/' style={styles.subtitle}>
         Back to index
       </Link>
-    </View>
+    </Container>
   );
 }
 
