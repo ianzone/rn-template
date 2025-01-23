@@ -88,9 +88,7 @@ https://www.youtube.com/watch?v=CjbvmircpJ4
 
 https://wix.github.io/react-native-ui-lib/
 
-https://reactnativeelements.com/docs/installation
-
-https://callstack.github.io/react-native-paper/
+https://github.com/gluestack/gluestack-ui
 
 https://tamagui.dev/docs/intro/introduction
 

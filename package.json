@@ -11,14 +11,15 @@
     "view": "expo serve",
     "lint": "biome check --fix src",
     "postinstall": "lefthook install",
-    "update": "nu expo@latest && expo install --fix && ncu -u",
+    "update": "nu expo@latest && expo install --fix && ncu -u && ni",
     "test": "jest",
     "check": "expo-doctor",
-    "commit": "git add -A && git-cz"
+    "commit": "git add -A && git commit --no-edit",
+    "squash": "node ./squash.mjs && git commit --no-edit --no-verify"
   },
   "dependencies": {
-    "expo": "^52.0.25",
-    "expo-router": "~4.0.16",
+    "expo": "^52.0.27",
+    "expo-router": "~4.0.17",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.6",
@@ -29,16 +30,17 @@
     "@biomejs/biome": "^1.9.4",
     "@testing-library/react-native": "^13.0.1",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.10.7",
+    "@types/node": "^22.10.9",
     "@types/react": "~18.3.18",
     "biome-extends": "^1.0.1",
     "expo-doctor": "^1.12.5",
     "git-cz": "^4.9.0",
     "jest": "^29.7.0",
     "jest-expo": "~52.0.3",
-    "knip": "^5.42.1",
-    "lefthook": "^1.10.7",
-    "typescript": "^5.7.3"
+    "knip": "^5.43.1",
+    "lefthook": "^1.10.10",
+    "typescript": "^5.7.3",
+    "zx": "^8.3.0"
   },
   "jest": {
     "preset": "jest-expo"

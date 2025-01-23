@@ -2,27 +2,28 @@
 # https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
 
 pre-commit:
-  parallel: true
+  piped: true
   jobs:
-    - name: QA
-      group:
-        piped: true
-        jobs:
-          - name: biome
-            glob: "*.{ts,tsx,js,jsx,json,jsonc,css}"
-            run: na biome check --fix {staged_files} --reporter summary
-            stage_fixed: true
-          - name: typescript
-            glob: "*.{ts,tsx}"
-            run: na tsc --noEmit
-          - name: vitest
-            glob: "*.{test.ts,test.tsx,spec.ts,spec.tsx}"
-            run: nr test
+    - name: Linting & Formatting
+      glob: "*.{ts,tsx,js,jsx,json,jsonc,css}"
+      run: na biome check --fix {staged_files} --reporter summary
+      stage_fixed: true
 
-    - name: Audit
+    - name: QA, Audit, Misc
       group:
         parallel: true
         jobs:
+          # SECTION - QA
+          - name: typescript
+            glob: "*.{ts,tsx}"
+            run: na tsc {staged_files} --noEmit --strict --skipLibCheck --jsx react-jsx
+          - name: jest
+            glob: "*.{ts,tsx,js,jsx}"
+            run: na test
+          - name: storybook
+            glob: "*.{tsx,jsx}"
+            run: echo 'use storybook'
+          # SECTION - Audit
           - name: gitleaks
             run: gitleaks protect --staged --no-banner
           - name: audit
@@ -31,10 +32,14 @@ pre-commit:
             run: echo license
           - name: doctor
             run: na expo-doctor
-
-    - name: Misc
-      group:
-        parallel: true
-        jobs:
+          #SECTION - Misc
           - name: knip
             run: na knip --no-exit-code --no-config-hints
+
+prepare-commit-msg:
+  commands:
+    commit:
+      interactive: true
+      run: na git-cz --hook
+      env:
+        LEFTHOOK: "0"
