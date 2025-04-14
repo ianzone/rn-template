@@ -6,11 +6,11 @@ interface CounterProps {
 }
 
 export function Counter(props: CounterProps) {
-  const { count, increment } = useCounter(props.init);
+  const { count, increment } = useCounter(props.init ?? 0);
 
   return (
     <View style={styles.css}>
-      <Text testID='count'>count: {count}</Text>
+      <Text testID='count'>{count}</Text>
       <Button testID='incButton' title='Increment' onPress={() => increment()} />
     </View>
   );

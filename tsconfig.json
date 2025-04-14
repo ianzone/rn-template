@@ -1,5 +1,5 @@
 {
-  "extends": "expo/tsconfig.base",
+  "extends": "@es-proj/configs/tsconfig.rn",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

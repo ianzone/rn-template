@@ -1,4 +1,4 @@
 {
   "format": "group",
-  "reject": ["@types/react", "react*", "typescript", "expo-*"]
+  "reject": ["@types/react", "react*"]
 }

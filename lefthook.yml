@@ -14,26 +14,21 @@ pre-commit:
         parallel: true
         jobs:
           # SECTION - QA
-          - name: typescript
+          - name: Type Check
             glob: "*.{ts,tsx}"
             run: na tsc
-          - name: jest
+          - name: Unit Tests
             glob: "*.{ts,tsx,js,jsx}"
-            run: na test
-          - name: storybook
-            glob: "*.{tsx,jsx}"
-            run: echo 'use storybook'
+            run: na jest
           # SECTION - Audit
-          - name: gitleaks
+          - name: Credential Audit
             run: gitleaks protect --staged --no-banner
-          - name: audit
-            run: echo audit
-          - name: license
-            run: echo license
-          - name: doctor
+          - name: Dependency Audit
             run: na expo-doctor
+          - name: License Audit
+            run: echo license
           #SECTION - Misc
-          - name: knip
+          - name: Unused dependencies
             run: na knip --no-exit-code --no-config-hints
 
 prepare-commit-msg:
