@@ -9,7 +9,7 @@ export default function Page() {
       <Text style={styles.subtitle}>This is a nested route '/*/*'</Text>
       <Text style={styles.subtitle}>{JSON.stringify({ nested }, null, 2)}</Text>
       <Link style={styles.subtitle} href='/'>
-        Back to index
+        Back to Home
       </Link>
     </Container>
   );

@@ -18,7 +18,7 @@
     "squash": "bun scripts/squash.ts && git commit --no-edit --no-verify"
   },
   "dependencies": {
-    "expo": "^52.0.44",
+    "expo": "^52.0.46",
     "expo-router": "~4.0.20",
     "react": "18.3.1",
     "react-native": "0.76.9",
@@ -28,8 +28,8 @@
     "@es-proj/rn": "^1.0.1",
     "@types/react": "~18.3.12",
     "git-cz": "^4.9.0",
-    "knip": "^5.50.3",
-    "lefthook": "^1.11.10"
+    "knip": "^5.50.5",
+    "lefthook": "^1.11.11"
   },
   "jest": {
     "preset": "jest-expo"

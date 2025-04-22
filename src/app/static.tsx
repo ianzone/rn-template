@@ -7,7 +7,7 @@ export default function Page() {
     <Container>
       <Text style={styles.subtitle}>This is a static route '/static'</Text>
       <Link href='/' style={styles.subtitle}>
-        Back to index
+        Back to Home
       </Link>
     </Container>
   );
