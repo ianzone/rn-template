@@ -18,18 +18,18 @@
     "squash": "bun scripts/squash.ts && git commit --no-edit --no-verify"
   },
   "dependencies": {
-    "expo": "^52.0.46",
-    "expo-router": "~4.0.20",
-    "react": "18.3.1",
-    "react-native": "0.76.9",
-    "react-native-web": "~0.19.13"
+    "expo": "^53.0.8",
+    "expo-router": "~5.0.6",
+    "react": "19.0.0",
+    "react-native": "0.79.2",
+    "react-native-web": "^0.20.0"
   },
   "devDependencies": {
-    "@es-proj/rn": "^1.0.1",
-    "@types/react": "~18.3.12",
+    "@es-proj/rn": "^1.0.2",
+    "@types/react": "~19.0.10",
     "git-cz": "^4.9.0",
-    "knip": "^5.50.5",
-    "lefthook": "^1.11.11"
+    "knip": "^5.54.1",
+    "lefthook": "^1.11.12"
   },
   "jest": {
     "preset": "jest-expo"
