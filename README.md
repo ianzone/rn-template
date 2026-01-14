@@ -29,7 +29,7 @@
   <tr>
     <td>Testing</td>
     <td>
-      <a href="https://jestjs.io/docs/tutorial-react-native"><img src='https://img.shields.io/badge/jest-C21325?logo=jest&labelColor=grey'></a>
+      <a href="https://jestjs.io/docs/tutorial-react-native"><img src='https://img.shields.io/badge/Jest-C21325?logo=jest&labelColor=grey'></a>
       <a href="https://callstack.github.io/react-native-testing-library/"><img src='https://img.shields.io/badge/Testing_Library-E33332?logo=testinglibrary&labelColor=grey'></a>
       <a href="https://fakerjs.dev/api/"><img src='https://img.shields.io/badge/Mock-Faker-blue'></a>
     </td>
@@ -43,7 +43,6 @@
       <a href="https://github.com/evilmartians/lefthook/"><img src='https://img.shields.io/badge/Lefthook-FF1E1E?labelColor=grey&logo=lefthook'></a>
     </td>
     <td>
-      <a href="https://semantic-release.gitbook.io/semantic-release"><img src='https://img.shields.io/badge/semantic-e10079?logo=semantic-release&labelColor=grey'></a>
     </td>
   </tr>
 </table>

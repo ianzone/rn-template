@@ -2,6 +2,8 @@
   "extends": "@es-proj/configs/tsconfig.rn",
   "compilerOptions": {
     "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "paths": {
       "src/*": ["src/*"]
     }

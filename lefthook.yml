@@ -5,7 +5,7 @@ pre-commit:
   piped: true
   jobs:
     - name: Linting & Formatting
-      glob: "*.{ts,tsx,js,jsx,json,jsonc,css}"
+      glob: '*.{ts,tsx,js,jsx,json,jsonc,css}'
       run: na biome check --fix {staged_files} --reporter summary
       stage_fixed: true
 
@@ -15,16 +15,16 @@ pre-commit:
         jobs:
           # SECTION - QA
           - name: Type Check
-            glob: "*.{ts,tsx}"
+            glob: '*.{ts,tsx}'
             run: na tsc
           - name: Unit Tests
-            glob: "*.{ts,tsx,js,jsx}"
+            glob: '*.{ts,tsx,js,jsx}'
             run: na jest
           # SECTION - Audit
           - name: Credential Audit
             run: gitleaks protect --staged --no-banner
           - name: Dependency Audit
-            run: na expo-doctor
+            run: na expo-doctor --verbose
           - name: License Audit
             run: echo license
           #SECTION - Misc
@@ -35,9 +35,9 @@ prepare-commit-msg:
   commands:
     commit:
       interactive: true
-      run: na git-cz --hook
+      run: na czg --hook
       env:
-        LEFTHOOK: "0"
+        LEFTHOOK: '0'
 
 post-merge:
   commands:
