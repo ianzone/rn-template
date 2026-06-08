@@ -1,20 +1,24 @@
-import { fireEvent, render } from '@testing-library/react-native';
+import { describe, expect, test } from '@jest/globals';
+import { fireEvent, render, waitFor } from '@testing-library/react-native';
 import { Counter } from './Counter';
 
 describe('Counter', () => {
-  test('renders a count of 0', () => {
-    const { getByTestId } = render(<Counter />);
+  test('renders a count of 0', async () => {
+    const { getByTestId } = await render(<Counter />);
     expect(getByTestId('count')).toHaveProperty('children', ['0']);
   });
 
-  test('renders a count of 1', () => {
-    const { getByTestId } = render(<Counter init={1} />);
+  test('renders a count of 1', async () => {
+    const { getByTestId } = await render(<Counter init={1} />);
     expect(getByTestId('count')).toHaveProperty('children', ['1']);
   });
 
-  test('renders a count of 1 after clicking the increment button', () => {
-    const { getByTestId, getByRole } = render(<Counter />);
+  test('renders a count of 1 after clicking the increment button', async () => {
+    const { getByTestId, getByRole } = await render(<Counter />);
     fireEvent.press(getByRole('button', { name: 'Increment' }));
-    expect(getByTestId('count')).toHaveProperty('children', ['1']);
+
+    await waitFor(() => {
+      expect(getByTestId('count')).toHaveProperty('children', ['1']);
+    });
   });
 });

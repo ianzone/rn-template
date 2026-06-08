@@ -1,6 +1,6 @@
 import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
-import { Counter } from 'src';
+import { Counter } from 'src/components';
 
 export default function Page() {
   return (
