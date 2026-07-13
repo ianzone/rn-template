@@ -11,7 +11,7 @@
     "build:web": "expo export --platform web",
     "view": "expo serve",
     "lint": "biome check --fix src",
-    "test": "jest",
+    "test": "vitest run --coverage",
     "check": "expo-doctor",
     "prepare": "lefthook install",
     "update": "nlx expo@latest install --fix && ncu -u && ni",
@@ -19,11 +19,11 @@
     "squash": "bun scripts/squash.ts && git commit --no-edit --no-verify"
   },
   "dependencies": {
-    "expo": "~57.0.1",
-    "expo-constants": "~57.0.2",
-    "expo-linking": "~57.0.1",
-    "expo-router": "~57.0.2",
-    "expo-splash-screen": "~57.0.1",
+    "expo": "~57.0.4",
+    "expo-constants": "~57.0.3",
+    "expo-linking": "~57.0.2",
+    "expo-router": "~57.0.4",
+    "expo-splash-screen": "~57.0.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.0",
@@ -32,24 +32,19 @@
     "react-native-web": "^0.21.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.2",
-    "@es-proj/utils": "^1.6.11",
+    "@biomejs/biome": "^2.5.3",
+    "@es-proj/utils": "^2.0.1",
     "@testing-library/react-native": "^14.0.1",
     "@types/jest": "29.5.14",
     "@types/react": "~19.2.10",
+    "@vitest/coverage-v8": "^4.1.10",
     "babel-plugin-module-resolver": "^5.0.3",
     "czg": "^1.13.1",
     "expo-doctor": "^1.20.0",
-    "jest": "~29.7.0",
-    "jest-expo": "~57.0.0",
-    "knip": "^6.24.0",
-    "lefthook": "^2.1.9",
-    "typescript": "~6.0.3"
-  },
-  "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|@sentry/react-native|native-base|react-native-svg)"
-    ]
+    "knip": "^6.26.0",
+    "lefthook": "^2.1.10",
+    "typescript": "~6.0.3",
+    "vitest": "^4.1.10",
+    "vitest-native": "^0.8.0"
   }
 }

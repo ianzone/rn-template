@@ -19,7 +19,7 @@ pre-commit:
             run: na tsc
           - name: Unit Tests
             glob: '*.{ts,tsx,js,jsx}'
-            run: na jest
+            run: nr test
           # SECTION - Audit
           - name: Credential Audit
             run: gitleaks protect --staged --no-banner

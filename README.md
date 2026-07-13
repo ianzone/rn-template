@@ -29,9 +29,9 @@
   <tr>
     <td>Testing</td>
     <td>
-      <a href="https://jestjs.io/docs/tutorial-react-native"><img src='https://img.shields.io/badge/Jest-C21325?logo=jest&labelColor=grey'></a>
+      <a href="https://cn.vitest.dev/guide/"><img src='https://img.shields.io/badge/Vitest-729b1b?logo=Vitest&labelColor=grey'></a>
       <a href="https://callstack.github.io/react-native-testing-library/"><img src='https://img.shields.io/badge/Testing_Library-E33332?logo=testinglibrary&labelColor=grey'></a>
-      <a href="https://fakerjs.dev/api/"><img src='https://img.shields.io/badge/Mock-Faker-blue'></a>
+      <a href="https://fakerjs.dev/api/"><img src='https://img.shields.io/badge/Faker-779B2E?logo=faker&labelColor=grey'></a>
     </td>
     <td>
       <a href="https://storybook.js.org/tutorials/intro-to-storybook/react-native/en/get-started/"><img src='https://img.shields.io/badge/Storybook-FF4785?logo=storybook&labelColor=grey'></a>

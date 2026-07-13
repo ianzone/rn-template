@@ -1,5 +1,5 @@
-import { describe, expect, test } from '@jest/globals';
 import { fireEvent, render, waitFor } from '@testing-library/react-native';
+import { describe, expect, test } from 'vitest';
 import { Counter } from './Counter';
 
 describe('Counter', () => {
