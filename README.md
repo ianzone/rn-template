@@ -76,6 +76,7 @@
 </table>
 
 # 库
+
 https://reactnative.directory/
 
 # 性能优化
@@ -91,12 +92,10 @@ https://github.com/gluestack/gluestack-ui
 
 https://tamagui.dev/docs/intro/introduction
 
-## 为何不使用 vitest？
-
-https://github.com/vitest-dev/vitest/issues/1321
-
 ## 桌面端支持
+
 https://github.com/microsoft/react-native-windows
 
 ## 鸿蒙支持
+
 https://gitee.com/openharmony-sig/ohos_react_native

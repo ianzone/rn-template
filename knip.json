@@ -1,4 +1,4 @@
 {
   "$schema": "https://unpkg.com/knip/schema.json",
-  "ignoreBinaries": ["na", "nr", "nup", "nlx"]
+  "ignoreBinaries": ["na", "nr", "nup", "nlx", "ncu", "ni"]
 }
